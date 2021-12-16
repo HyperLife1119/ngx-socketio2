@@ -14,6 +14,7 @@ export class Socketio implements OnDestroy {
   get connected(): boolean { return this.socket.connected };
   get disconnected(): boolean { return this.socket.disconnected };
   get io(): Manager { return this.socket.io };
+  get auth(): Socket['auth'] { return this.socket.auth };
 
   constructor(
     @Inject(SOCKETIO_CONFIG) { uri, options }: SocketioConfig
