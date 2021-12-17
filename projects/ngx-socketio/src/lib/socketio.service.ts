@@ -17,9 +17,9 @@ export class Socketio implements OnDestroy {
   get auth(): Socket['auth'] { return this.socket.auth };
 
   constructor(
-    @Inject(SOCKETIO_CONFIG) { uri, options }: SocketioConfig
+    @Inject(SOCKETIO_CONFIG) { url, options }: SocketioConfig
   ) {
-    this.socket = io(uri, options);
+    this.socket = io(url, options);
     this.socket.onAny((eventName: string, ...args: any[]) => {
       this.subject.next({ eventName, args });
     });

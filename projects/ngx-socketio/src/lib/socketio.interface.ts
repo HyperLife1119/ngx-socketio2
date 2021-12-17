@@ -1,6 +1,6 @@
 import { ManagerOptions, SocketOptions } from 'socket.io-client';
 
 export interface SocketioConfig {
-  uri: string,
+  url: string,
   options?: Partial<SocketOptions & ManagerOptions>
 }

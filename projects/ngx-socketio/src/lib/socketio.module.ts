@@ -5,7 +5,7 @@ import { SOCKETIO_CONFIG } from './socketio.token';
 
 @NgModule()
 export class SocketioModule {
-  static forRoot(config: SocketioConfig = { uri: '' }): ModuleWithProviders<SocketioModule> {
+  static forRoot(config: SocketioConfig = { url: '' }): ModuleWithProviders<SocketioModule> {
     return {
       ngModule: SocketioModule,
       providers: [
