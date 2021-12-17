@@ -2,6 +2,30 @@
   "name": "ngx-socketio",
   "version": "0.0.1",
   "description": "A better Socket.IO module for Angular.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HyperLife1119/ngx-socketio.git"
+  },
+  "keywords": [
+    "angular",
+    "ngx-socketio",
+    "ngx-socket.io",
+    "ngx-socket-io",
+    "socketio",
+    "socket-io",
+    "socketio-client",
+    "socket-io-client",
+    "socket.io-client",
+    "observable",
+    "reactive",
+    "rxjs"
+  ],
+  "author": "HyperLife1119 <hyperlife1119@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodgc/ngx-socket-io/issues"
+  },
+  "homepage": "https://github.com/rodgc/ngx-socket-io#readme",
   "peerDependencies": {
     "@angular/common": ">=10.0.0",
     "@angular/core": ">=10.0.0",

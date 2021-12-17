@@ -89,7 +89,7 @@ export class YourService {
 
 Using multiple sockets with different endpoints:
 
-In this case, we no longer need the `SocketioModule`. Instead, use a new service that inherits from the `Socketio` service and passes the configuration by calling `super(config)`.
+In this case, we no longer need the `SocketioModule`. Instead, use a new service that extends from the `Socketio` service and passes the configuration by calling `super(config)`.
 
 ```ts
 import { Injectable } from '@angular/core';
