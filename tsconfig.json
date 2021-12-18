@@ -20,9 +20,9 @@
       "dom"
     ],
     "paths": {
-      "ngx-socketio": [
-        "dist/ngx-socketio/ngx-socketio",
-        "dist/ngx-socketio"
+      "ngx-socketio2": [
+        "dist/ngx-socketio2/ngx-socketio2",
+        "dist/ngx-socketio2"
       ]
     }
   },

@@ -1,7 +1,7 @@
-# ngx-socketio
+# ngx-socketio2
 
-[![npm version](https://img.shields.io/npm/v/ngx-socketio/latest.svg)](https://npmjs.com/package/@taiga-ui/cdk)
-![Node.js CI](https://github.com/HyperLife1119/ngx-socketio/workflows/Node.js%20CI/badge.svg)
+[![npm version](https://img.shields.io/npm/v/ngx-socketio2/latest.svg)](https://npmjs.com/package/ngx-socketio2)
+![Node.js CI](https://github.com/HyperLife1119/ngx-socketio2/workflows/Node.js%20CI/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Angular](https://img.shields.io/badge/Build%20with-Angular%20CLI-red?logo=angular)](https://www.github.com/angular/angular)
 
@@ -23,7 +23,7 @@ A better [Socket.IO](https://socket.io) module for [Angular](https://angular.io)
 ## Install
 
 ```shell
-npm i ngx-socketio
+npm i ngx-socketio2
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ npm i ngx-socketio
 Import and configure the `SocketioModule`:
 
 ```ts
-import { SocketioModule } from 'ngx-socketio';
+import { SocketioModule } from 'ngx-socketio2';
 
 @NgModule({
   // ...
@@ -52,7 +52,7 @@ Getting Socketio Service via DI:
 
 ```ts
 import { Injectable } from '@angular/core';
-import { Socketio } from 'ngx-socketio';
+import { Socketio } from 'ngx-socketio2';
 import { tap } from 'rxjs/operators';
 
 @Injectable()
@@ -93,7 +93,7 @@ In this case, we no longer need the `SocketioModule`. Instead, use a new service
 
 ```ts
 import { Injectable } from '@angular/core';
-import { Socketio } from 'ngx-socketio';
+import { Socketio } from 'ngx-socketio2';
 
 @Injectable()
 export class Socketio1Service extends Socketio {
