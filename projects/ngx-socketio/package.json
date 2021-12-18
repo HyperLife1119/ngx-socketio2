@@ -23,9 +23,9 @@
   "author": "HyperLife1119 <hyperlife1119@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rodgc/ngx-socket-io/issues"
+    "url": "https://github.com/HyperLife1119/ngx-socketio/issues"
   },
-  "homepage": "https://github.com/rodgc/ngx-socket-io#readme",
+  "homepage": "https://github.com/HyperLife1119/ngx-socketio#readme",
   "peerDependencies": {
     "@angular/common": ">=10.0.0",
     "@angular/core": ">=10.0.0",
