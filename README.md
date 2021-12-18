@@ -124,8 +124,8 @@ export class YourModule { }
 
 ## API
 
-| Name | API | Description |
-| ---- | --- | ----------- |
+| Class | API | Description |
+| ----- | --- | ----------- |
 | SocketioModule | .forRoot({ url[, options] })       | [https://socket.io/docs/v4/client-api/#iourl](https://socket.io/docs/v4/client-api/#iourl) |
 | Socketio       | .id                                | [https://socket.io/docs/v4/client-api/#socketid](https://socket.io/docs/v4/client-api/#socketid) |
 |                | .connected                         | [https://socket.io/docs/v4/client-api/#socketconnected](https://socket.io/docs/v4/client-api/#socketconnected) |
@@ -136,15 +136,11 @@ export class YourModule { }
 |                | .disconnect()                      | [https://socket.io/docs/v4/client-api/#socketdisconnect](https://socket.io/docs/v4/client-api/#socketdisconnect) |
 |                | .send([...args][, ack])            | [https://socket.io/docs/v4/client-api/#socketsendargs](https://socket.io/docs/v4/client-api/#socketsendargs) |
 |                | .emit(eventName[, ...args][, ack]) | [https://socket.io/docs/v4/client-api/#socketemiteventname-args](https://socket.io/docs/v4/client-api/#socketemiteventname-args) |
-|                | .on()                              | [https://socket.io/docs/v4/client-api/#socketoneventname-callback](https://socket.io/docs/v4/client-api/#socketoneventname-callback) |
-|                | .on(eventName)                     | [https://socket.io/docs/v4/client-api/#socketonanycallback](https://socket.io/docs/v4/client-api/#socketonanycallback) |
+|                | .on()                              | [https://socket.io/docs/v4/client-api/#socketonanycallback](https://socket.io/docs/v4/client-api/#socketonanycallback) |
+|                | .on(eventName)                     | [https://socket.io/docs/v4/client-api/#socketoneventname-callback](https://socket.io/docs/v4/client-api/#socketoneventname-callback) |
 |                | .once(eventName)                   | Similar to `.on(eventName)`, but only responds once. |
 |                | .compress(compress)                | [https://socket.io/docs/v4/client-api/#socketcompressvalue](https://socket.io/docs/v4/client-api/#socketcompressvalue) |
 
-## Q&A
-
-Why choose this library? It is more complete, younger and modern than [ngx-socket-io](https://www.npmjs.com/package/ngx-socket-io).
-
 ## Stats
 
-![Stats](https://repobeats.axiom.co/api/embed/59f75da44a2887a253ee62d72389ee17ee6a8563.svg "Repobeats analytics image")
+![Stats](https://repobeats.axiom.co/api/embed/59f75da44a2887a253ee62d72389ee17ee6a8563.svg)

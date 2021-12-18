@@ -13,6 +13,7 @@
     "ngx-socket-io",
     "socketio",
     "socket-io",
+    "socket.io",
     "socketio-client",
     "socket-io-client",
     "socket.io-client",
