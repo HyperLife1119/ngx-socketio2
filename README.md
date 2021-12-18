@@ -87,7 +87,7 @@ export class YourService {
 }
 ```
 
-Using multiple sockets with different endpoints:
+### Using multiple sockets with different endpoints
 
 In this case, we no longer need the `SocketioModule`. Instead, use a new service that extends from the `Socketio` service and passes the configuration by calling `super(config)`.
 
