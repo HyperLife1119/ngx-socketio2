@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "dev": "ng build --watch",
-    "build": "ng build --prod & node ./scripts/copy.mjs",
+    "build": "ng build --prod && node ./scripts/copy.mjs",
+    "publish": "npm run build && npm publish ./dist/ngx-socketio2",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
