@@ -59,27 +59,18 @@ import { tap } from 'rxjs/operators';
 export class YourService {
   constructor(private socket: Socketio) {}
 
-  sendMessage(msg: string) {
+  send(msg: string) {
     this.socket.emit('message', msg);
   }
 
-  sendMessages(msg1: string, msg2: string) {
+  sendMultiple(msg1: string, msg2: string) {
     // Chain call.
     this.socket.emit('message', msg1).emit('message', msg2);
   }
 
-  getMessage() {
+  receive() {
     return this.socket.on<string>('message').pipe(
       tap((args: string) => {
-        // Do something...
-      })
-    );
-  }
-
-  getAll() {
-    // Listen to all events.
-    return this.socket.on<any>().pipe(
-      tap((data: { eventName: string, args: any }) => {
         // Do something...
       })
     );
