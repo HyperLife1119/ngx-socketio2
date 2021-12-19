@@ -95,7 +95,10 @@ export class Socketio implements OnDestroy {
 
     if (!eventName) {
       return observable.pipe(
-        map(({ args }) => (args.length === 1 ? args[0] : args) as T)
+        map(({ eventName, args }) => ({
+          eventName,
+          args: (args.length === 1 ? args[0] : args) as T
+        }))
       );
     }
 
