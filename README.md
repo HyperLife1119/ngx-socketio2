@@ -136,7 +136,6 @@ export class YourModule { }
 |                | .disconnect()                      | [https://socket.io/docs/v4/client-api/#socketdisconnect](https://socket.io/docs/v4/client-api/#socketdisconnect) |
 |                | .send([...args][, ack])            | [https://socket.io/docs/v4/client-api/#socketsendargs](https://socket.io/docs/v4/client-api/#socketsendargs) |
 |                | .emit(eventName[, ...args][, ack]) | [https://socket.io/docs/v4/client-api/#socketemiteventname-args](https://socket.io/docs/v4/client-api/#socketemiteventname-args) |
-|                | .on()                              | [https://socket.io/docs/v4/client-api/#socketonanycallback](https://socket.io/docs/v4/client-api/#socketonanycallback) |
 |                | .on(eventName)                     | [https://socket.io/docs/v4/client-api/#socketoneventname-callback](https://socket.io/docs/v4/client-api/#socketoneventname-callback) |
 |                | .once(eventName)                   | Similar to `.on(eventName)`, but only responds once. |
 |                | .compress(compress)                | [https://socket.io/docs/v4/client-api/#socketcompressvalue](https://socket.io/docs/v4/client-api/#socketcompressvalue) |
