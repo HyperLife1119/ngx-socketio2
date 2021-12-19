@@ -10,11 +10,35 @@ export class Socketio implements OnDestroy {
   private subject: Subject<{ eventName: string, args: any[] }> = new Subject();
   private socket: Socket;
 
+  /**
+   * @see {@link Socket.id}
+   */
   get id(): string { return this.socket.id };
+
+  /**
+   * @see {@link Socket.connected}
+   */
   get connected(): boolean { return this.socket.connected };
+
+  /**
+   * @see {@link Socket.disconnected}
+   */
   get disconnected(): boolean { return this.socket.disconnected };
+
+  /**
+   * @see {@link Socket.io}
+   */
   get io(): Manager { return this.socket.io };
+
+  /**
+   * @see {@link Socket.auth}
+   */
   get auth(): Socket['auth'] { return this.socket.auth };
+
+  /**
+   * @see {@link Socketio.auth}
+   */
+  set auth(auth: Socket['auth']) { this.auth = auth };
 
   constructor(
     @Inject(SOCKETIO_CONFIG) { url, options }: SocketioConfig
@@ -30,27 +54,45 @@ export class Socketio implements OnDestroy {
     this.subject.complete();
   }
 
+  /**
+   * @see {@link Socket.connect}
+   */
   connect(): this {
     this.socket.connect();
     return this;
   }
 
+  /**
+   * @see {@link Socket.disconnect}
+   */
   disconnect(): this {
     this.socket.disconnect();
     return this;
   }
 
+  /**
+   * @see {@link Socket.send}
+   */
   send(...args: any[]): this {
     this.socket.send(...args);
     return this;
   }
 
+  /**
+   * @see {@link Socket.emit}
+   */
   emit(eventName: string, ...args: any[]): this {
     this.socket.emit(eventName, ...args);
     return this;
   }
 
+  /**
+   * @see {@link Socket.onAny}
+   */
   on<T>(): Observable<{ eventName: string, args: T }>
+  /**
+   * @see {@link Socket.on}
+   */
   on<T>(eventName?: string): Observable<T>
   on<T extends any>(eventName?: string): Observable<T> | Observable<{ eventName: string, args: T }> {
     const observable = this.subject.asObservable();
@@ -67,10 +109,16 @@ export class Socketio implements OnDestroy {
     );
   }
 
+  /**
+   * @see {@link Socket.once}
+   */
   once<T>(eventName: string): Observable<T> {
     return this.on<T>(eventName).pipe(take(1));
   }
 
+  /**
+   * @see {@link Socket.compress}
+   */
   compress(compress: boolean): this {
     this.socket.compress(compress);
     return this;
