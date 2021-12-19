@@ -6,5 +6,8 @@
     "umdModuleIds": {
       "socket.io-client": "io"
     }
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "socket.io-client"
+  ]
 }
