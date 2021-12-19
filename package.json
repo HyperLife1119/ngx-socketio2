@@ -5,11 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "dev": "ng build --watch",
-    "build": "ng build --prod & copy",
+    "build": "ng build --prod & node ./scripts/copy.mjs",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "copy": "node ./scripts/copy.mjs"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
