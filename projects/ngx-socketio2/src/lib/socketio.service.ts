@@ -34,11 +34,7 @@ export class Socketio implements OnDestroy {
    * @see {@link Socket.auth}
    */
   get auth(): Socket['auth'] { return this.socket.auth };
-
-  /**
-   * @see {@link Socketio.auth}
-   */
-  set auth(auth: Socket['auth']) { this.auth = auth };
+  set auth(auth: Socket['auth']) { this.socket.auth = auth };
 
   constructor(
     @Inject(SOCKETIO_CONFIG) { url, options }: SocketioConfig
