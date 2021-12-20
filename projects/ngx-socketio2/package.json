@@ -1,6 +1,6 @@
 {
   "name": "ngx-socketio2",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A better Socket.IO module for Angular.",
   "repository": {
     "type": "git",
