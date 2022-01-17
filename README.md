@@ -6,6 +6,7 @@ A better [Socket.IO](https://socket.io) module for [Angular](https://angular.io)
 ![Node.js CI](https://github.com/HyperLife1119/ngx-socketio2/workflows/Node.js%20CI/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Angular](https://img.shields.io/badge/Build%20with-Angular%20CLI-red?logo=angular)](https://www.github.com/angular/angular)
+[![CodeFactor](https://www.codefactor.io/repository/github/hyperlife1119/ngx-socketio2/badge)](https://www.codefactor.io/repository/github/hyperlife1119/ngx-socketio2)
 
 ## Features
 
