@@ -7,7 +7,7 @@
       "socket.io-client": "io"
     }
   },
-  "whitelistedNonPeerDependencies": [
+  "allowedNonPeerDependencies": [
     "socket.io-client"
   ]
 }

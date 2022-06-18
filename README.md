@@ -17,7 +17,7 @@ A better [Socket.IO](https://socket.io) module for [Angular](https://angular.io)
 
 ## Prerequisites
 
-- [Angular](https://angular.io) >= 10.0.0
+- [Angular](https://angular.io) >= 11.0.0
 - [Socket.IO](https://socket.io) >= 4.0.0
 
 
@@ -53,12 +53,12 @@ Getting Socketio Service via DI:
 
 ```ts
 import { Injectable } from '@angular/core';
-import { Socketio } from 'ngx-socketio2';
+import { Socket } from 'ngx-socketio2';
 import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class YourService {
-  constructor(private socket: Socketio) {}
+  constructor(private socket: Socket) {}
 
   send(msg: string) {
     this.socket.emit('message', msg);
@@ -85,17 +85,17 @@ In this case, we no longer need the `SocketioModule`. Instead, use a new service
 
 ```ts
 import { Injectable } from '@angular/core';
-import { Socketio } from 'ngx-socketio2';
+import { Socket } from 'ngx-socketio2';
 
 @Injectable()
-export class Socketio1Service extends Socketio {
+export class Socket1Service extends Socket {
   constructor() {
     super({ url: 'http://localhost:4200' })
   }
 }
 
 @Injectable()
-export class Socketio2Service extends Socketio {
+export class Socket2Service extends Socket {
   constructor() {
     super({ url: 'http://localhost:6200' })
   }
@@ -107,8 +107,8 @@ export class Socketio2Service extends Socketio {
   // ...
   providers: [
     // ...
-    Socketio1Service,
-    Socketio2Service
+    Socket1Service,
+    Socket2Service
   ]
 })
 export class YourModule { }
@@ -116,22 +116,18 @@ export class YourModule { }
 
 ## API
 
-| Class | API | Description |
-| ----- | --- | ----------- |
-| SocketioModule | .forRoot({ url[, options] })       | [https://socket.io/docs/v4/client-api/#iourl](https://socket.io/docs/v4/client-api/#iourl) |
-| Socketio       | .id                                | [https://socket.io/docs/v4/client-api/#socketid](https://socket.io/docs/v4/client-api/#socketid) |
-|                | .connected                         | [https://socket.io/docs/v4/client-api/#socketconnected](https://socket.io/docs/v4/client-api/#socketconnected) |
-|                | .disconnected                      | [https://socket.io/docs/v4/client-api/#socketdisconnected](https://socket.io/docs/v4/client-api/#socketdisconnected) |
-|                | .io                                | [https://socket.io/docs/v4/client-api/#socketio](https://socket.io/docs/v4/client-api/#socketio) |
-|                | .auth                              | [https://socket.io/docs/v4/client-options/#auth](https://socket.io/docs/v4/client-options/#auth) |
-|                | .connect()                         | [https://socket.io/docs/v4/client-api/#socketconnect](https://socket.io/docs/v4/client-api/#socketconnect) |
-|                | .disconnect()                      | [https://socket.io/docs/v4/client-api/#socketdisconnect](https://socket.io/docs/v4/client-api/#socketdisconnect) |
-|                | .send([...args][, ack])            | [https://socket.io/docs/v4/client-api/#socketsendargs](https://socket.io/docs/v4/client-api/#socketsendargs) |
-|                | .emit(eventName[, ...args][, ack]) | [https://socket.io/docs/v4/client-api/#socketemiteventname-args](https://socket.io/docs/v4/client-api/#socketemiteventname-args) |
+| Class          | API                                | Description                                                                                                                          |
+| -------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| SocketioModule | .forRoot({ url[, options] })       | [https://socket.io/docs/v4/client-api/#iourl](https://socket.io/docs/v4/client-api/#iourl)                                           |
+| Socket         | .id                                | [https://socket.io/docs/v4/client-api/#socketid](https://socket.io/docs/v4/client-api/#socketid)                                     |
+|                | .connected                         | [https://socket.io/docs/v4/client-api/#socketconnected](https://socket.io/docs/v4/client-api/#socketconnected)                       |
+|                | .disconnected                      | [https://socket.io/docs/v4/client-api/#socketdisconnected](https://socket.io/docs/v4/client-api/#socketdisconnected)                 |
+|                | .io                                | [https://socket.io/docs/v4/client-api/#socketio](https://socket.io/docs/v4/client-api/#socketio)                                     |
+|                | .auth                              | [https://socket.io/docs/v4/client-options/#auth](https://socket.io/docs/v4/client-options/#auth)                                     |
+|                | .connect()                         | [https://socket.io/docs/v4/client-api/#socketconnect](https://socket.io/docs/v4/client-api/#socketconnect)                           |
+|                | .disconnect()                      | [https://socket.io/docs/v4/client-api/#socketdisconnect](https://socket.io/docs/v4/client-api/#socketdisconnect)                     |
+|                | .send([...args][, ack])            | [https://socket.io/docs/v4/client-api/#socketsendargs](https://socket.io/docs/v4/client-api/#socketsendargs)                         |
+|                | .emit(eventName[, ...args][, ack]) | [https://socket.io/docs/v4/client-api/#socketemiteventname-args](https://socket.io/docs/v4/client-api/#socketemiteventname-args)     |
 |                | .on(eventName)                     | [https://socket.io/docs/v4/client-api/#socketoneventname-callback](https://socket.io/docs/v4/client-api/#socketoneventname-callback) |
-|                | .once(eventName)                   | Similar to `.on(eventName)`, but only responds once. |
-|                | .compress(compress)                | [https://socket.io/docs/v4/client-api/#socketcompressvalue](https://socket.io/docs/v4/client-api/#socketcompressvalue) |
-
-## Stats
-
-![Stats](https://repobeats.axiom.co/api/embed/59f75da44a2887a253ee62d72389ee17ee6a8563.svg)
+|                | .once(eventName)                   | Similar to `.on(eventName)`, but only responds once.                                                                                 |
+|                | .compress(compress)                | [https://socket.io/docs/v4/client-api/#socketcompressvalue](https://socket.io/docs/v4/client-api/#socketcompressvalue)               |
