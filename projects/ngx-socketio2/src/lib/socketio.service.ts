@@ -2,13 +2,13 @@ import { Inject, Injectable, OnDestroy } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
 import { FromEventTarget } from 'rxjs/internal/observable/fromEvent';
 import { take } from 'rxjs/operators';
-import { io, Manager, Socket } from 'socket.io-client';
+import { io, Manager, Socket as _Socket } from 'socket.io-client';
 import { SocketioConfig } from './socketio.interface';
 import { SOCKETIO_CONFIG } from './socketio.token';
 
 @Injectable()
-export class Socketio implements OnDestroy {
-  private socket: Socket;
+export class Socket implements OnDestroy {
+  private socket: _Socket;
 
   /**
    * @see {@link Socket.id}
@@ -33,8 +33,11 @@ export class Socketio implements OnDestroy {
   /**
    * @see {@link Socket.auth}
    */
-  get auth(): Socket['auth'] { return this.socket.auth };
-  set auth(auth: Socket['auth']) { this.socket.auth = auth };
+  get auth(): _Socket['auth'] { return this.socket.auth };
+  /**
+   * @see {@link Socket.auth}
+   */
+  set auth(auth: _Socket['auth']) { this.socket.auth = auth };
 
   constructor(
     @Inject(SOCKETIO_CONFIG) { url, options }: SocketioConfig
