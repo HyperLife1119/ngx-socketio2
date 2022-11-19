@@ -10,7 +10,7 @@ export class SocketioModule {
       ngModule: SocketioModule,
       providers: [
         { provide: SOCKETIO_CONFIG, useValue: config },
-        { provide: Socket, useClass: Socket },
+        Socket,
       ],
     };
   }

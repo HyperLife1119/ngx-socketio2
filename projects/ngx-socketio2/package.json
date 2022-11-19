@@ -1,6 +1,6 @@
 {
   "name": "ngx-socketio2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A better Socket.IO module for Angular.",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
     "angular12",
     "angular13",
     "angular14",
+    "angular15",
     "ngx-socketio",
     "ngx-socket.io",
     "ngx-socket-io",
@@ -39,7 +40,7 @@
     "socket.io-client": "^4.0.0"
   },
   "dependencies": {
-    "tslib": "2.4.0",
-    "socket.io-client": "4.4.0"
+    "tslib": "^2.4.0",
+    "socket.io-client": "^4.4.0"
   }
 }
